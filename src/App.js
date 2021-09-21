@@ -1,24 +1,20 @@
 import "./App.css";
-import foods from "./foods.json";
-import {useState} from 'react';
+import { Row, Divider } from "antd";
+import foods from "./foods.json" ;
+import FoodBox from "./components/FoodBox";
 
 function App() {
   //console.log(foods)
   //console.log(foods[0].name)
 
-  const [food, setFood] = useState(foods)
-  return <div className="App">
-    <h1>Food List</h1>
 
-    {food.map((element) => {
-      return(
-        <div>
-          <p>{element.name}</p>
-          <img src={element.image} width={100} alt="" />
-        </div>
-      )
-    })}
-    
-  </div>;
+  return (
+    <div className="App">
+      <Divider><h1>Food List</h1></Divider>
+     
+        <FoodBox food={foods}/>
+
+    </div>
+  );
 }
 export default App;
