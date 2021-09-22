@@ -1,10 +1,21 @@
 import { Form, Input } from 'antd';
-//import {useState} from 'react'
+import {useState} from 'react'
 
 
 function Search(props){
-
-
+    const [inputSearch, setInputSearch] = useState("")
+    console.log(props)
+    const handleInputSearch = (event) =>{
+         setInputSearch(event.target.value)
+      }
+    
+ /*    const filterFood = (props, query) => {
+        
+        return props.filter((element) => {
+            const foodName = element.name.toLowerCase();
+            return foodName.includes(query);
+        });
+    }; */
 
     return (
         <div>
@@ -12,7 +23,7 @@ function Search(props){
                     layout="vertical" style={{ marginLeft: 500 }}  
                    >
                 <Form.Item label="Search">
-                    <Input type="text" />
+                    <Input value={inputSearch} type="text" onChange={handleInputSearch} />
                 </Form.Item>               
 
             </Form> 
