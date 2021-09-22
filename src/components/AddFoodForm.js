@@ -1,6 +1,6 @@
 import { Form, Input, Button } from 'antd';
 import React, { useState } from "react";
-;
+
 
 function AddFoodForm(props){
     const [inputName, setInputName] = useState('')

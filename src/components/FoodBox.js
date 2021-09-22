@@ -2,7 +2,8 @@ import { Card, Col, Row,Button } from "antd";
 
 function FoodBox(props){
   //console.log(props)
-  console.log(props.food)
+  //console.log(props.food)
+
     return (
         <div className="FoodBox">
         <Row style={{ width: "100%", justifyContent: "center" }}>
