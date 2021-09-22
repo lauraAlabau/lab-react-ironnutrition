@@ -2,7 +2,7 @@ import { Card, Col, Row,Button } from "antd";
 
 function FoodBox(props){
   //console.log(props)
-  //console.log(props.food)
+  console.log(props.food)
     return (
         <div className="FoodBox">
         <Row style={{ width: "100%", justifyContent: "center" }}>
@@ -10,10 +10,7 @@ function FoodBox(props){
                 //console.log(element)
             return(
                 <Col>
-                    <Card
-                        title={element.name}
-                        style={{ width: 230, height: 300, margin: 10 }}
-                    >
+                    <Card title={element.name} style={{ width: 230, height: 300, margin: 10 }}>
                         <img src={element.image} height={60} alt="" />
                         <p>Calories: {element.calories}</p>
                         <p>Servings: {element.servings}</p>
@@ -25,6 +22,7 @@ function FoodBox(props){
                 </Col>
             )
             })}
+            
             </Row>
 
         </div>
